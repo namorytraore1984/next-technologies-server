@@ -6,14 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/v1/users")
-public class UserManegerController {
+public class UserManagerController {
 	
 	@GetMapping
 	public String testEndpoint() throws Exception {
-		//return "Controller works well";
-		throw new Exception();
+		return "Controller works well";
 		
 	}
-
 }
 

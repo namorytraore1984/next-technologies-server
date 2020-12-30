@@ -14,18 +14,16 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class AppUser extends EntityBase implements Serializable {
+public class AppRole extends EntityBase implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String username;
-    private String password;
+    private int roleId;
+    private String name;
+    //private String username;
+    @ManyToMany
+    private Set<AppUser> appUser;
     @ManyToMany(
-            mappedBy = "appUser"
+            mappedBy = "appRole"
     )
-    private Set<AppRole> roles;
-    private boolean isAccountNonExpired;
-    private boolean isAccountNonLocked;
-    private boolean isCredentialsNonExpired;
-    private boolean isEnabled;
+    private Set<AppPermission> permissions;
 }

@@ -21,6 +21,9 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
+	// https://mvnrepository.com/artifact/org.mapstruct/mapstruct
+	compile group: 'org.mapstruct', name: 'mapstruct', version: '1.4.1.Final'
+	compile group: 'com.google.guava', name: 'guava', version: '30.0-jre'
 }
 
 test {
